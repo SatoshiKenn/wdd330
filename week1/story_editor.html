@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Story Editor</title>
+    <script>
+      function loadStory(){
+        var storyName = document.querySelector("#name_input").value;
+        var storyHTML = localStorage.getItem(storyName);
+        document.querySelector("#story_editor").value = storyHTML;
+      }
+
+      function saveStory(){
+        var storyName = document.querySelector("#name_input").value;
+        var storyHTML = document.querySelector("#story_editor").value;
+        localStorage.setItem(storyName, storyHTML);
+      }
+
+      function displayStory(){
+        var storyHTML = document.querySelector("#story_editor").value;
+        console.log(storyHTML);
+        document.querySelector("#story_display").innerHTML = storyHTML;
+      }
+    </script>
+
+    <style>
+      textarea {
+        width: 800px;
+        height: 250px;
+        background-color: lightyellow ;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Story Editor</h1>
+    Story Name:
+    <input id="name_input" />
+    <section>
+      <button onclick="loadStory()">Find and Edit it</button>
+      <button onclick="saveStory()">Save it</button>
+      <button onclick="displayStory()">Display it</button>
+      <a href="../index.html">Return to Portfolio</a>
+    </section>
+    <textarea
+      id="story_editor"
+      placeholder="Write a totally awesome story here"
+    ></textarea>
+    <section id="story_display"></section>
+    <
+  </body>
+</html>

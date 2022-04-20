@@ -2,7 +2,7 @@
 const links = [
     {
         label: "Week 1",
-        url: "week1/index.html"
+        url: "week1/story_editor.html"
     }
 ]
 
@@ -16,7 +16,7 @@ function displayLinks(link) {
     li.setAttribute("class", "liList");
     a.setAttribute("class", "aList");
     a.setAttribute("href", `${link.url}`)
-    a.innerHTML = `${link.label}`;
+    a.innerHTML = `${link.label} Project`;
 
     li.appendChild(a);
     list.appendChild(li);
