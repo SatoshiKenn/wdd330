@@ -7,8 +7,12 @@ p_year.innerHTML = `&copy; ${year}  :|: Kennette Guevara :|: SV-CL`;
 //Assignment links
 const links = [
     {
-        label: "Week 1",
-        url: "week1/index.html"
+        label: "Story Editor",
+        url: "story_editor.html"
+    },
+    {
+        label: "Return to Portfolio",
+        url: "../index.html"
     }
 ]
 
@@ -22,7 +26,7 @@ function displayLinks(link) {
     li.setAttribute("class", "liList");
     a.setAttribute("class", "aList");
     a.setAttribute("href", `${link.url}`)
-    a.innerHTML = `${link.label} Project`;
+    a.innerHTML = `${link.label}`;
 
     li.appendChild(a);
     list.appendChild(li);

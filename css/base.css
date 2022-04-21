@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0 auto;
+  text-align: center;
+  max-width: 100%;
+  font-size: 2rem;
+}
+
+main {
+  margin: 0 auto;
+}
+
+header {
+  background-color: #0045ad;
+  color: #ffffff;
+}
+
+footer {
+  background-color: #0045ad;
+  color: #ffffff;
+}
+
+#list{
+    list-style: none;
+}
