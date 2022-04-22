@@ -34,3 +34,9 @@ footer {
 #list {
   list-style: none;
 }
+
+/*WEEK 1 CSS*/
+.week1img{
+  width: 100%;
+  height: auto;
+}
