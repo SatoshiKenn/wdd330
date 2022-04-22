@@ -17,6 +17,14 @@ p {
   padding: 10px;
 }
 
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  color: #ffd52b;
+}
+
 main {
   margin: 0 auto;
 }
@@ -24,11 +32,17 @@ main {
 header {
   background-color: #0045ad;
   color: #ffffff;
+  border-radius: 10px;
 }
 
 footer {
   background-color: #0045ad;
   color: #ffffff;
+  border-radius: 10px;
+}
+
+#copyright {
+  text-align: center;
 }
 
 #list {

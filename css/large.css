@@ -1,4 +1,8 @@
 @media only screen and (min-width: 64rem) {
+    body {
+        max-width: 1200px;
+    }
+
     .week1img {
         width: 850px;
         height: auto;
