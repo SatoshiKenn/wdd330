@@ -11,6 +11,12 @@ body {
   font-size: 2rem;
 }
 
+p {
+  font-size: 1.5rem;
+  text-align: justify;
+  padding: 10px;
+}
+
 main {
   margin: 0 auto;
 }
@@ -25,6 +31,6 @@ footer {
   color: #ffffff;
 }
 
-#list{
-    list-style: none;
+#list {
+  list-style: none;
 }
