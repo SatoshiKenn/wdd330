@@ -7,12 +7,12 @@ p_year.innerHTML = `&copy; ${year}  :|: Kennette Guevara :|: SV-CL`;
 //Assignment links
 const links = [
     {
-        label: "Week 1",
-        url: "week1/index.html"
+        label: "W02 Team Activity",
+        url: "teamactivity.html"
     },
     {
-        label: "Week 2",
-        url: "week2/index.html"
+        label: "Return to Portfolio",
+        url: "../index.html"
     }
 ]
 

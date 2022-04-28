@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="desciption"
+      content="Portfolio portal site for WDD 330, BYU-Idaho"
+    />
+    <script defer src="js/mainw2.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    />
+    <link rel="stylesheet" href="../css/base.css" />
+    <link rel="stylesheet" href="../css/medium.css" />
+    <link rel="stylesheet" href="../css/large.css" />
+    <title>Portfolio</title>
+  </head>
+  <body>
+    <header>
+      <h1>Week 2 Team Assignment</h1>
+    </header>
+    <main>
+      <a href="index.html">Return</a>
+      <h2>Step 1</h2>
+
+      <input type="text" id="textInput" name="textInput" />
+
+      <button type="button" id="button" onClick="displayInput()">
+        Display
+      </button>
+
+      <div id="outputDiv"></div>
+
+      <h2>Step 2</h2>
+
+      <input type="number" id="numberInput" name="numberInput" />
+
+      <button type="button" id="button2" onClick="sumNumbers()">Display</button>
+
+      <div id="outputDiv2"></div>
+
+      <h2>Step 3</h2>
+
+      <div style="display: inline">
+        <input
+          type="number"
+          id="numberInput2"
+          name="numberInput2"
+          style="display: inline"
+        />
+
+        <p style="display: inline">+</p>
+
+        <input
+          type="number"
+          id="numberInput3"
+          name="numberInput3"
+          style="display: inline"
+        />
+
+        <p style="display: inline">=</p>
+
+        <div id="outputDiv3" style="display: inline"></div>
+      </div>
+
+      <br />
+      <br />
+
+      <button type="button" id="button3" onClick="addNumbers()">Add</button>
+
+      <h2>Stretch 1</h2>
+
+      <div style="display: inline">
+        <input
+          type="number"
+          id="subtractNum1"
+          name="subtractNum1"
+          style="display: inline"
+        />
+
+        <p style="display: inline">-</p>
+
+        <input
+          type="number"
+          id="subtractNum2"
+          name="subtractNum2"
+          style="display: inline"
+        />
+
+        <p style="display: inline">=</p>
+
+        <div id="subtractOutput" style="display: inline"></div>
+      </div>
+
+      <br />
+      <br />
+
+      <button type="button" id="subtractButton" onClick="subtractNumbers()">
+        Substract
+      </button>
+
+      <br />
+      <br />
+
+      <div style="display: inline">
+        <input
+          type="number"
+          id="multiplyNum1"
+          name="multiplyNum1"
+          style="display: inline"
+        />
+
+        <p style="display: inline">x</p>
+
+        <input
+          type="number"
+          id="multiplyNum2"
+          name="multiplyNum2"
+          style="display: inline"
+        />
+
+        <p style="display: inline">=</p>
+
+        <div id="multiplyOutput" style="display: inline"></div>
+      </div>
+
+      <br />
+      <br />
+
+      <button type="button" id="multiplyButton" onClick="multiplyNumbers()">
+        Multiply
+      </button>
+
+      <h2>Stretch 2</h2>
+
+      <div style="display: inline">
+        <input type="number" id="num1" name="num1" style="display: inline" />
+
+        <label for="operators"></label>
+
+        <select name="operators" id="operators">
+          <option value="none">Choose operator</option>
+          <option value="add">add</option>
+          <option value="subtract">subtract</option>
+          <option value="multiply">multiply</option>
+        </select>
+
+        <input type="number" id="num2" name="num2" style="display: inline" />
+
+        <p style="display: inline">=</p>
+
+        <div id="calculateOutput" style="display: inline"></div>
+      </div>
+
+      <br />
+      <br />
+
+      <button
+        type="button"
+        id="calculateButton"
+        onClick="calculate(displayTotal)"
+      >
+        Calculate
+      </button>
+
+      <script>
+        function displayInput() {
+          let inputText = document.getElementById("textInput").value;
+
+          document.getElementById("outputDiv").innerHTML = inputText;
+        }
+
+        function sumNumbers() {
+          let numberInput = document.getElementById("numberInput").value;
+
+          let total = 0;
+
+          for (let i = 1; i <= numberInput; i++) {
+            total += i;
+          }
+
+          document.getElementById("outputDiv2").innerHTML = total;
+        }
+
+        function addNumbers() {
+          let number1 = parseInt(document.getElementById("numberInput2").value);
+
+          let number2 = parseInt(document.getElementById("numberInput3").value);
+
+          document.getElementById("outputDiv3").innerHTML = number1 + number2;
+        }
+
+        // STRETCH 1 -----------------------------------------------------------------------------------
+
+        let subtractNumbers = function () {
+          let number1 = parseInt(document.getElementById("subtractNum1").value);
+
+          let number2 = parseInt(document.getElementById("subtractNum2").value);
+
+          document.getElementById("subtractOutput").innerHTML =
+            number1 - number2;
+        };
+
+        let multiplyNumbers = () => {
+          let number1 = parseInt(document.getElementById("multiplyNum1").value);
+
+          let number2 = parseInt(document.getElementById("multiplyNum2").value);
+
+          document.getElementById("multiplyOutput").innerHTML =
+            number1 * number2;
+        };
+
+        //STRETCH 2 & 3 -----------------------------------------------------------------------------------
+
+        function calculate(callback) {
+          let operator = document.getElementById("operators").value;
+
+          let num1 = parseInt(document.getElementById("num1").value);
+
+          let num2 = parseInt(document.getElementById("num2").value);
+
+          let total;
+
+          switch (operator) {
+            case "add":
+              total = num1 + num2;
+              break;
+            case "subtract":
+              total = num1 - num2;
+              break;
+            case "multiply":
+              total = num1 * num2;
+              break;
+            default:
+              total = "Invalid selection";
+          }
+
+          callback(total);
+        }
+
+        function displayTotal(total) {
+          document.getElementById("calculateOutput").innerHTML = total;
+        }
+      </script>
+    </main>
+    <footer>
+      <div class="copyright">
+        <p id="copyright">&copy; Kennette Guevara</p>
+      </div>
+    </footer>
+  </body>
+</html>
