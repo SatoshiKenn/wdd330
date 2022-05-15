@@ -55,3 +55,8 @@ h4 {
 #board > div:nth-child(6) {
   border-bottom: 5px solid #000;
 }
+
+#disableBtn, #returnLink {
+  text-align: center;
+  padding: 10px;
+}
