@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <link href="css/tickTackToe.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <h4>Note: This page uses 'ontouchend' which<br> only works in mobile devices.</h4>
+
+        <h2>Week 4 :: Tick Tack Toe</h2>
+
+        <h3 id="turn">Player :: 1</h3>
+
+        <div id="board" ontouchend="Touched(event)">
+            <div class="square" id="sq-1"></div>
+            <div class="square" id="sq-2"></div>
+            <div class="square" id="sq-3"></div>
+ 
+            <div class="square" id="sq-4"></div>
+            <div class="square" id="sq-5"></div>
+            <div class="square" id="sq-6"></div>
+ 
+            <div class="square" id="sq-7"></div>
+            <div class="square" id="sq-8"></div>
+            <div class="square" id="sq-9"></div>
+        </div>
+
+        <div class="resetBtn" onclick="reset()">Reset</div>
+        
+        <script src="js/tickTackToe.js" async defer></script>
+    </body>
+</html>
