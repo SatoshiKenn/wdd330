@@ -1,0 +1,24 @@
+main {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.ligrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.hikeheading {
+    grid-column: 1/3;
+    grid-row: 1;
+    font-size: 2rem;
+}
+
+.imghike {
+    grid-column: 1;
+}
+
+.information {
+    font-size: 1.5rem;
+    margin-top: 75px;
+}
