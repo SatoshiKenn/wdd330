@@ -1,0 +1,99 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  max-width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  min-width: 300px;
+  display: flex;
+  flex-flow: column;
+}
+
+main {
+  max-width: 100%;
+  min-width: 375px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+h1 {
+  background-color: blanchedalmond;
+}
+
+.listcontainer {
+  max-width: 100%;
+  text-align: center;
+  margin: 0 auto;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  min-height: 300px;
+  
+}
+
+li {
+  margin-top: 00.5rem;
+  margin-bottom: 0.5rem;
+  list-style: none;
+}
+
+.checkTask {
+  float: left;
+  margin-left: 5px;
+}
+
+.delBtn {
+  float: right;
+  margin-right: 5px;
+}
+
+.taskInput {
+  padding: 1px;
+  display: flex;
+}
+
+#enterTask {
+  width: 90%;
+  height: 30px;
+}
+
+#addtask{
+  width: 40px;
+  font-size: 1.5rem;
+}
+
+.tasksFooter {
+  display: flex;
+  flex-flow: row;
+  background-color: blanchedalmond;
+  margin: 0 auto;
+}
+
+#tasksLeft {
+  margin-top: 10px;
+  margin: 0 auto;
+  margin-top: 8px;
+}
+
+.footerBtns {
+  display: flex;
+  flex-flow: row;
+  text-align: center;
+  background-color: blanchedalmond;
+  margin: 0 auto;
+}
+
+.filterTask {
+  padding: 10px;
+  border: 0;
+  border-radius: 10px;
+  background-color: transparent;
+}
+
+.information {
+  text-align: center;
+  font-size: 1rem;
+  padding: 10px;
+  background-color: blanchedalmond;
+}

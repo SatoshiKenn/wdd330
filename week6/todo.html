@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="TODO Challenge" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script defer src="js/main.js" type="module"></script>
+    <title>To Do List</title>
+  </head>
+  <body>
+    <h1>To Do List</h1>
+    <main>
+      <div class="listcontainer">
+        <ul id="list">
+          <li>
+            <input class="checkTask" type="checkbox" /> Test Task for the todo
+            list <button class="delBtn">❌</button>
+          </li>
+        </ul>
+        <footer>
+          <div class="tasksFooter">
+            <p id="tasksLeft">tasks left</p>
+            <div class="footerBtns">
+              <button class="filterTask" id="filterAll" type="button">All</button>
+              <button class="filterTask" id="filterActive" type="button">Active</button>
+              <button class="filterTask" id="filterCompleted" type="button">Completed</button>
+            </div>
+          </div>
+        </footer>
+      </div>
+      <div class="taskInput">
+        <input type="text" id="enterTask" placeholder="Task name" required />
+        <button type="button" id="addtask" >+</button>
+      </div>
+    </main>
+    <footer class="information">
+      <div class="copyright">
+        <p id="copyright">&copy; Kennette Guevara</p>
+      </div>
+    </footer>
+  </body>
+</html>
