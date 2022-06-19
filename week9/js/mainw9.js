@@ -11,6 +11,10 @@ const links = [
         url: "proposal.html"
     },
     {
+        label: "Team Activity",
+        url: "teamactivity.html"
+    },
+    {
         label: "Return to Portfolio",
         url: "../index.html"
     }

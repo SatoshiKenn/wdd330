@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>JS Drum Kit</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="keys">
+      <div data-key="65" class="key">
+        <kbd>A</kbd>
+        <span class="sound">clap</span>
+      </div>
+      <div data-key="83" class="key">
+        <kbd>S</kbd>
+        <span class="sound">hihat</span>
+      </div>
+      <div data-key="68" class="key">
+        <kbd>D</kbd>
+        <span class="sound">kick</span>
+      </div>
+      <div data-key="70" class="key">
+        <kbd>F</kbd>
+        <span class="sound">openhat</span>
+      </div>
+      <div data-key="71" class="key">
+        <kbd>G</kbd>
+        <span class="sound">boom</span>
+      </div>
+      <div data-key="72" class="key">
+        <kbd>H</kbd>
+        <span class="sound">ride</span>
+      </div>
+      <div data-key="74" class="key">
+        <kbd>J</kbd>
+        <span class="sound">snare</span>
+      </div>
+      <div data-key="75" class="key">
+        <kbd>K</kbd>
+        <span class="sound">tom</span>
+      </div>
+      <div data-key="76" class="key">
+        <kbd>L</kbd>
+        <span class="sound">tink</span>
+      </div>
+    </div>
+
+    <audio data-key="65" src="sounds/clap.wav"></audio>
+    <audio data-key="83" src="sounds/hihat.wav"></audio>
+    <audio data-key="68" src="sounds/kick.wav"></audio>
+    <audio data-key="70" src="sounds/openhat.wav"></audio>
+    <audio data-key="71" src="sounds/boom.wav"></audio>
+    <audio data-key="72" src="sounds/ride.wav"></audio>
+    <audio data-key="74" src="sounds/snare.wav"></audio>
+    <audio data-key="75" src="sounds/tom.wav"></audio>
+    <audio data-key="76" src="sounds/tink.wav"></audio>
+
+    <script>
+      let posA = 10;
+      let posS = 10;
+      let posD = 10;
+      let posF = 10;
+      let posG = 10;
+      let posH = 10;
+      let posJ = 10;
+      let posK = 10;
+      let posL = 10;
+      document.addEventListener("keydown", (event) => {
+        let isAKey = event.key === "a" || event.key === "A";
+        let isSKey = event.key === "s" || event.key === "S";
+        let isDKey = event.key === "d" || event.key === "D";
+        let isFKey = event.key === "f" || event.key === "F";
+        let isGKey = event.key === "g" || event.key === "G";
+        let isHKey = event.key === "h" || event.key === "H";
+        let isJKey = event.key === "j" || event.key === "J";
+        let isKKey = event.key === "k" || event.key === "K";
+        let isLKey = event.key === "l" || event.key === "L";
+        if (isAKey) {
+          playAudio(document.querySelector('audio[data-key="65"]'));
+          document.querySelector('div[data-key="65"]').classList.add("playing");
+          moveDown(document.querySelector('div[data-key="65"]'), posA, "A");
+        } else if (isSKey) {
+          playAudio(document.querySelector('audio[data-key="83"]'));
+          document.querySelector('div[data-key="83"]').classList.add("playing");
+          moveDown(document.querySelector('div[data-key="83"]'), posS, "S");
+        } else if (isDKey) {
+          playAudio(document.querySelector('audio[data-key="68"]'));
+          document.querySelector('div[data-key="68"]').classList.add("playing");
+        } else if (isFKey) {
+          playAudio(document.querySelector('audio[data-key="70"]'));
+          document.querySelector('div[data-key="70"]').classList.add("playing");
+        } else if (isGKey) {
+          playAudio(document.querySelector('audio[data-key="71"]'));
+          document.querySelector('div[data-key="71"]').classList.add("playing");
+        } else if (isHKey) {
+          playAudio(document.querySelector('audio[data-key="72"]'));
+          document.querySelector('div[data-key="72"]').classList.add("playing");
+        } else if (isJKey) {
+          playAudio(document.querySelector('audio[data-key="74"]'));
+          document.querySelector('div[data-key="74"]').classList.add("playing");
+        } else if (isKKey) {
+          playAudio(document.querySelector('audio[data-key="75"]'));
+          document.querySelector('div[data-key="75"]').classList.add("playing");
+        } else if (isLKey) {
+          playAudio(document.querySelector('audio[data-key="76"]'));
+          document.querySelector('div[data-key="76"]').classList.add("playing");
+        }
+      });
+      document.addEventListener("keyup", (event) => {
+        let isAKey = event.key === "a" || event.key === "A";
+        let isSKey = event.key === "s" || event.key === "S";
+        let isDKey = event.key === "d" || event.key === "D";
+        let isFKey = event.key === "f" || event.key === "F";
+        let isGKey = event.key === "g" || event.key === "G";
+        let isHKey = event.key === "h" || event.key === "H";
+        let isJKey = event.key === "j" || event.key === "J";
+        let isKKey = event.key === "k" || event.key === "K";
+        let isLKey = event.key === "l" || event.key === "L";
+        if (isAKey) {
+          document
+            .querySelector('div[data-key="65"]')
+            .classList.remove("playing");
+        } else if (isSKey) {
+          document
+            .querySelector('div[data-key="83"]')
+            .classList.remove("playing");
+        } else if (isDKey) {
+          document
+            .querySelector('div[data-key="68"]')
+            .classList.remove("playing");
+        } else if (isFKey) {
+          document
+            .querySelector('div[data-key="70"]')
+            .classList.remove("playing");
+        } else if (isGKey) {
+          document
+            .querySelector('div[data-key="71"]')
+            .classList.remove("playing");
+        } else if (isHKey) {
+          document
+            .querySelector('div[data-key="72"]')
+            .classList.remove("playing");
+        } else if (isJKey) {
+          document
+            .querySelector('div[data-key="74"]')
+            .classList.remove("playing");
+        } else if (isKKey) {
+          document
+            .querySelector('div[data-key="75"]')
+            .classList.remove("playing");
+        } else if (isLKey) {
+          document
+            .querySelector('div[data-key="76"]')
+            .classList.remove("playing");
+        }
+      });
+      function playAudio(audio) {
+        audio.pause();
+        audio.currentTime = 0;
+        audio.play();
+      }
+      function moveDown(button, position, letter) {
+        button.style.transform = `translateY(${position}px)`;
+        if (position >= 100) {
+          switch (letter) {
+            case "A":
+              posA = 0;
+              break;
+            case "S":
+              posS = 0
+              break;
+          }
+        } else {
+          switch (letter) {
+            case "A":
+              posA += 10;
+            case "S":
+              posS += 10;
+          }
+        }
+      }
+    </script>
+  </body>
+</html>
