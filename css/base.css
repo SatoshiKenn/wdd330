@@ -54,3 +54,21 @@ footer {
   width: 100%;
   height: auto;
 }
+
+/*WEEK 9 CSS*/
+.wireframeContainer {
+  padding: 10px;
+}
+
+.wireframe {
+  width: 100%;
+}
+
+.colors {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.typography {
+  width: 100%;
+}

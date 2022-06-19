@@ -7,4 +7,19 @@
         width: 700px;
         height: auto;
     }
+
+    /*WEEK 9 CSS*/
+
+    .wireframe {
+        width: 80%;
+      }
+      
+      .colors {
+        width: 80%;
+        border-radius: 10px;
+      }
+      
+      .typography {
+        width: 100%;
+      }
 }
