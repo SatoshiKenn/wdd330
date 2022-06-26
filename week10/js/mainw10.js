@@ -8,7 +8,7 @@ p_year.innerHTML = `&copy; ${year}  :|: Kennette Guevara :|: SV-CL`;
 const links = [
     {
         label: "Team Activity",
-        url: "teamactivity.html"
+        url: "quakes.html"
     },
     {
         label: "Return to Portfolio",
